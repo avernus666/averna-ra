@@ -1,0 +1,11 @@
+C:\Users\avern\Documents\RAT\client\target\release\deps\socket2-2c3107a8771d821c.d: C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\lib.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sockaddr.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\socket.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sockref.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sys\windows.rs
+
+C:\Users\avern\Documents\RAT\client\target\release\deps\libsocket2-2c3107a8771d821c.rlib: C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\lib.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sockaddr.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\socket.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sockref.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sys\windows.rs
+
+C:\Users\avern\Documents\RAT\client\target\release\deps\libsocket2-2c3107a8771d821c.rmeta: C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\lib.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sockaddr.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\socket.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sockref.rs C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sys\windows.rs
+
+C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\lib.rs:
+C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sockaddr.rs:
+C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\socket.rs:
+C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sockref.rs:
+C:\Users\avern\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\socket2-0.6.4\src\sys\windows.rs:

